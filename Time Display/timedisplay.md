@@ -1,0 +1,1 @@
+Turbo Shubh Time Display is a simple web application that displays the current time and allows users to start and stop the time display with the click of a button. The project is part of the Turbo Shubh Event Second Chapter series.

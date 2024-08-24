@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbo Shubh</title>
+    <style>
+        body{
+            background-color: #313131;
+        }
+        button{
+            height: 50px;
+            width: 100px;
+            margin: 10px;
+            color: red;
+            background-color: yellow;
+            font-size: larger;
+            font-weight: 700;
+            margin-left: 370px;
+        }
+
+        #timedisplay{
+            color: yellow;
+            background-color: red;
+            block-size: 25px;
+            font-weight: 700;
+            font-size: larger;
+            text-align: center;
+            border-radius: 10px;
+        }
+        h1{
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Second Chapter</h1>
+    <div id="timedisplay">Current Time</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let stopInterval;
+    document.querySelector('#start').addEventListener('click', function(){
+        if (stopInterval) {
+            clearInterval(stopInterval)
+        }
+        const myDate = function(){
+        const date = new Date();
+        document.querySelector('#timedisplay').textContent = date.toLocaleTimeString()
+        
+    }
+    stopInterval = setInterval(myDate, 1000);
+    });
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(stopInterval);
+    }) 
+</script>
+</html>
